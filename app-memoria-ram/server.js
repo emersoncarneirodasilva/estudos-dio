@@ -1,13 +1,13 @@
 const http = require("http");
 const host = "http://localhost";
 const port = 3000;
-const stats = require("./pcRamUsage.js");
+const status = require("./pcRamUsage.js");
 
 http.createServer((req, res) => {
   let url = req.url;
 
-  if (url === "/stats") {
-    res.end(JSON.stringify(stats, null, 2))
+  if (url === "/status") {
+    res.end(JSON.stringify(status, null, 2))
   } else {
     res.write("<h1>Bem vindo!</h1>");
     res.end();

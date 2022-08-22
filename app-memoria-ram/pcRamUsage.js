@@ -6,7 +6,7 @@ setInterval(() => {
   const fRam = freemem() / 1024 / 1024;
   const usage = (fRam / tRam) * 100;
 
-  const stats = {
+  const status = {
     OS: platform(),
     Arch: arch(),
     TotalRAM: `${parseInt(tRam)} MB`,
@@ -15,7 +15,7 @@ setInterval(() => {
   };
 
   console.clear();
-  console.table(stats); 
+  console.table(status); 
 
-  exports.stats = stats;
+  exports.stats = status;
 }, 1000);
